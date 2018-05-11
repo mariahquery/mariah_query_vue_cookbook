@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mariah Query's Cookbook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<style>
+    /* body {
+         margin: 0;
+         font: normal 75% Arial, Helvetica, sans-serif;
+     }
+
+     canvas {
+         display: block;
+         vertical-align: bottom;
+     }
+
+     #particles-js {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         background-color: #82C1B6;
+         background-image: url("");
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: 50% 50%;
+     } */
+
+    .blueish-bg {
+        background: #87dbcc;
+    }
+
+    .blueish-color {
+        color: #87dbcc;
+    }
+
+    .main-title {
+        color: floralwhite;
+        margin-bottom: 30px;
+    }
+
+    .topics {
+        margin-top: 45px;
+    }
+
+    .vue-logo {
+        width: 55px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .main-section-title {
+        margin-top: 40px;
+    }
+
+    .flex-it {
+        display: flex;
+    }
+
+    .demo-wrapper {
+        padding: 10px;
+        border: 1px solid #00b89c;
+    }
+
+    .demo-content {
+        margin: 10px 0px;
+    }
+
+    .demo-description {
+        margin-bottom: 10px;
+    }
+
+    .demo-title {
+        font-size: 20px;
+    }
+
+    .toggle-list-component--wrapper, .level:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .max-height-scroll {
+        max-height: 150px;
+        height: 150px;
+        overflow-y: scroll;
+    }
+</style>
+<body>
+<!-- <div id="particles-js"></div> -->
+<div id="app">
+    <section class="section blueish-bg">
+        <div class="container">
+            <div class="flex-it">
+                <div>
+                    <img class="vue-logo" src="vue_logo.svg">
+                </div>
+                <div>
+                    <h1 class="title main-title">
+                        {{ main_title }}
+                    </h1>
+                    <p class="subtitle">
+                        <strong>Vue.js</strong> standalone examples 🤩
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2 class="title main-section-title">Examples</h2>
+            <div class="columns">
+                <div class="column">
+                    <div class="demo-wrapper">
+                        <div>
+                            <h3 class="demo-title"><i class="far fa-dot-circle blueish-color"></i> Toggle List</h3>
+                            <hr>
+                            <div class="demo-content max-height-scroll">
+                                <div v-for="item in list">
+                                    <toggle-list-component :list="list" :item="item"></toggle-list-component>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-info">
+                            <!--<p class="demo-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                                sint veritatis vitae voluptatum. </p> -->
+                            <!-- <button class="button is-primary">See Source</button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="demo-wrapper">
+                        <div>
+                            <h3 class="demo-title"><i class="far fa-dot-circle blueish-color"></i> Modal</h3>
+                            <hr>
+                            <div class="demo-content max-height-scroll">
+
+                                <modal v-if="showModal" @close="showModal = false">
+                                    Hello, I'm a modal
+                                </modal>
+
+                                <button class="button is-info" @click="showModal = true">Show Modal</button>
+
+                            </div>
+                        </div>
+                        <div class="demo-info">
+                            <!-- <p class="demo-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                                sint veritatis vitae voluptatum. </p> -->
+                            <!-- <button class="button is-primary">See Source</button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="demo-wrapper">
+                        <h3>Title</h3>
+                        <div class="demo-content">
+
+                            <!-- The Magic happens here -->
+
+                        </div>
+                        <div class="demo-info">
+                            <p class="demo-description"></p>
+                            <button class="button is-primary">See Source</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-isotope@0.1.0/dist/vue-isotope.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+<script src="components.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
